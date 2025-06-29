@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useAuthStore } from '../stores/authStore';
 import { Transaction, TransactionFilters, DashboardAnalytics, ExportConfig } from '../types';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
+const API_BASE_URL = 'https://project-backend-fibv.onrender.com/api' ;
 
 // Create axios instance with default config
 const api = axios.create({
