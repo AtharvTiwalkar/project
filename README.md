@@ -1,3 +1,11 @@
+#Pre dataset
+
+email address password
+user001@example.com password123
+user002@example.com password123
+user003@example.com password123
+user004@example.com password123
+
 # Penta Financial Dashboard
 
 A comprehensive full-stack financial application with dynamic data visualization, advanced filtering, and configurable CSV export functionality.
