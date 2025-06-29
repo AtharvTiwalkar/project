@@ -22,7 +22,10 @@ const PORT = process.env.PORT ;
 
 // Security middleware
 app.use(helmet());
-app.use(cors());
+app.use(cors({
+  origin: 'https://financedashboard-0a1a.onrender.com',
+  credentials: true // If you're using cookies or sessions
+}));
 
 // Rate limiting
 const limiter = rateLimit({
