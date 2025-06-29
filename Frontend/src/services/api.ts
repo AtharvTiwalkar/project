@@ -78,3 +78,37 @@ export const exportApi = {
       responseType: 'blob'
     })
 };
+
+
+// Wallet API
+export const walletApi = {
+  getOverview: () =>
+    api.get('/wallet/overview')
+};
+
+// Analytics API
+export const analyticsApi = {
+  getAdvanced: (period?: string) =>
+    api.get('/analytics/advanced', { params: { period } })
+};
+
+// Profile API
+export const profileApi = {
+  getProfile: () =>
+    api.get('/profile'),
+  
+  updateProfile: (data: any) =>
+    api.put('/profile', data)
+};
+
+// Messages API
+export const messagesApi = {
+  getConversations: () =>
+    api.get('/messages/conversations'),
+  
+  getMessages: (conversationId: number) =>
+    api.get(`/messages/conversations/${conversationId}/messages`),
+  
+  sendMessage: (conversationId: number, content: string) =>
+    api.post(`/messages/conversations/${conversationId}/messages`, { content })
+};

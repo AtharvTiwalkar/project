@@ -1,10 +1,14 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useAuthStore } from './stores/authStore';
 import Layout from './components/Layout/Layout';
 import Auth from './pages/Auth';
 import Dashboard from './pages/Dashboard';
 import Transactions from './pages/Transactions';
+import Settings from './pages/Settings';
+import Wallet from './pages/Wallet';
+import Analytics from './pages/Analytics';
+import Personal from './pages/Personal';
+import Messages from './pages/Messages';
 
 function App() {
   const { isAuthenticated } = useAuthStore();
@@ -19,11 +23,11 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Dashboard />} />
           <Route path="transactions" element={<Transactions />} />
-          <Route path="wallet" element={<div className="text-center py-12"><h2 className="text-2xl font-bold text-gray-800">Wallet - Coming Soon</h2></div>} />
-          <Route path="analytics" element={<div className="text-center py-12"><h2 className="text-2xl font-bold text-gray-800">Analytics - Coming Soon</h2></div>} />
-          <Route path="profile" element={<div className="text-center py-12"><h2 className="text-2xl font-bold text-gray-800">Profile - Coming Soon</h2></div>} />
-          <Route path="messages" element={<div className="text-center py-12"><h2 className="text-2xl font-bold text-gray-800">Messages - Coming Soon</h2></div>} />
-          <Route path="settings" element={<div className="text-center py-12"><h2 className="text-2xl font-bold text-gray-800">Settings - Coming Soon</h2></div>} />
+          <Route path="wallet" element={<Wallet />} />
+          <Route path="analytics" element={<Analytics />} />
+          <Route path="profile" element={<Personal />} />
+          <Route path="messages" element={<Messages />} />
+          <Route path="settings" element={<Settings />} />
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

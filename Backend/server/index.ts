@@ -9,6 +9,11 @@ import transactionRoutes from './routes/transactions';
 import dashboardRoutes from './routes/dashboard';
 import exportRoutes from './routes/export';
 import { errorHandler } from './middleware/errorHandler';
+import walletRoutes from './routes/wallet';
+import analyticsRoutes from './routes/analytics';
+import profileRoutes from './routes/profile';
+import messagesRoutes from './routes/messages';
+
 
 dotenv.config();
 
@@ -43,6 +48,11 @@ app.use('/api/auth', authRoutes);
 app.use('/api/transactions', transactionRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/export', exportRoutes);
+
+app.use('/api/wallet', walletRoutes);
+app.use('/api/analytics', analyticsRoutes);
+app.use('/api/profile', profileRoutes);
+app.use('/api/messages', messagesRoutes);
 
 // Error handling middleware
 app.use(errorHandler);
