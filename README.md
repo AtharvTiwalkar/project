@@ -1,10 +1,17 @@
-#Pre dataset
+# Pre Dataset
 
 email address password
 user001@example.com password123
 user002@example.com password123
 user003@example.com password123
 user004@example.com password123
+
+# Pages below are not fully functional
+
+Setting
+Messages
+Wallet
+Profile
 
 # Penta Financial Dashboard
 
